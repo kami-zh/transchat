@@ -30,6 +30,14 @@ body {
   line-height: 1.5;
 }
 
+.fa-hatena {
+  &:before {
+    content: 'B!';
+    font-family: Verdana;
+    font-weight: bold;
+  }
+}
+
 .header {
   overflow: hidden;
   background: linear-gradient(to bottom, darken($main_color, 20%), $main_color);
@@ -84,7 +92,7 @@ body {
 .content {
   .introductions {
     div {
-      padding: 0 20px;
+      margin: 0 20px 30px;
 
       h3 {
         margin: 30px 0 20px;
@@ -93,4 +101,36 @@ body {
       }
     }
   }
+
+  .social-button {
+    margin-bottom: 30px;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      width: 36px;
+      margin-right: 8px;
+      padding-top: 1px;
+      border-radius: 100%;
+      background-color: whiten($base_color, 95%);
+      color: whiten($base_color, 50%);
+      line-height: 35px;
+      transition: 200ms;
+
+      &:hover {
+        background-color: $main_color;
+        color: #fff;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.footer {
+  margin-bottom: 40px;
+  color: whiten($base_color, 50%);
+  text-align: center;
 }

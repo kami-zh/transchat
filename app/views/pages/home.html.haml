@@ -31,3 +31,17 @@
     %p
       transchatは、あくまでもコミュニケーションのきっかけのひとつです。
       身振り手振りを交えて、楽しく話してみましょう。
+
+.social-button
+  = link_to "http://b.hatena.ne.jp/entry/http://transchat.co/", data: { 'hatena-bookmark-layout' => 'simple' }, class: 'hatena hatena-bookmark-button', target: '_blank' do
+    %i.fa.fa-hatena
+  %script{src: 'http://b.st-hatena.com/js/bookmark_button.js'}
+
+  = link_to "http://twitter.com/share?url=http://transchat.co/&text=#{URI.encode('日本語⇔英語を翻訳する音声入力チャット transchat')}", target: '_blank' do
+    %i.fa.fa-twitter
+
+  = link_to "https://www.facebook.com/sharer/sharer.php?u=http://transchat.co/", target: '_blank' do
+    %i.fa.fa-facebook
+
+.footer
+  &copy; 2014 kami.
