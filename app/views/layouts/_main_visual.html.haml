@@ -1,0 +1,21 @@
+.main-visual
+  %h2
+    困っている外国の方を見かけたら
+    %br
+    このボタンから始めよう
+
+  %p
+    日本語⇔英語を翻訳する音声入力チャット
+
+  = link_to rooms_path, method: :post do
+    START
+
+  .statistics
+    これまでに
+    %span
+      = Room.count * 2
+    人の方から
+    %br
+    %span
+      = Message.count
+    回のコミュニケーションが生まれました
