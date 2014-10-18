@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password:
+  password: AcqufLEu849kHE7K
   host: localhost
 
 development:
@@ -49,6 +49,5 @@ test:
 #
 production:
   <<: *default
-  database: transchat_production
-  username: transchat
+  database: <%= ENV['TRANSCHAT_DATABASE_NAME'] %>
   password: <%= ENV['TRANSCHAT_DATABASE_PASSWORD'] %>
