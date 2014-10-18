@@ -1,1 +1,15 @@
-= link_to '開始する', rooms_path, method: :post
+.main-visual
+  %h2
+    困っている外国人を見かけたら、このボタンから始めよう。
+
+  %p
+    日本語⇔英語を翻訳する音声入力チャットサービス
+
+  = link_to '開始する', rooms_path, method: :post
+
+  .statistics
+    これまでに
+    = Room.count * 2
+    人の方から、
+    = Message.count
+    回のコミュニケーションが生まれました。
