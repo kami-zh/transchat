@@ -94,12 +94,36 @@ body {
 .content {
   .introductions {
     div {
-      margin: 0 20px 30px;
+      overflow: hidden;
+      width: 100%;
+      padding: 0 0 30px;
+      border-bottom: 1px solid whiten($base_color, 85%);
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      background-size: calc(50% - 10px) 100%;
+
+      &:nth-child(1) { background-image: url(step_1.png); }
+      &:nth-child(2) { background-image: url(step_2.png); }
+      &:nth-child(3) { background-image: url(step_3.png); }
 
       h3 {
-        margin: 30px 0 20px;
+        margin: 30px 20px 20px;
         font-family: 'Cabin Sketch', cursive;
         font-size: 200%;
+      }
+
+      p {
+        margin-left: 20px;
+        width: calc(50% - 30px);
+      }
+
+      &.note {
+        margin-bottom: 30px;
+
+        p {
+          width: calc(100% - 40px);
+          margin-right: 20px;
+        }
       }
     }
   }
