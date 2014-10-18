@@ -9,7 +9,7 @@
 
 = form_for @message do |f|
   %div
-    = f.text_field :content
+    = f.text_field :content, autofocus: true
 
   %div
     = f.hidden_field :room_id, value: params[:id]
