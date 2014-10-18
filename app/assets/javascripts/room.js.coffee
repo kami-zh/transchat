@@ -41,4 +41,7 @@ $ ->
     Language.change()
     Room.scroll()
 
+  $('.new_message').on 'submit', ->
+    false if $('#message_content').val() == ''
+
 window.Room = Room
