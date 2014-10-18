@@ -5,6 +5,9 @@ class Language
 
   @change: ->
     @changeLanguage()
+    @update()
+
+  @update: ->
     @hide()
     @show()
 
@@ -20,8 +23,15 @@ class Language
   @changeLanguage: ->
     @current = @other()
 
+    $.cookie('current', @current)
+
+  @setCurrentFromCache: ->
+    @current = $.cookie('current') if $.cookie('current')
+
 $ ->
-  Language.hide()
+  $(document).on 'page:change', ->
+    Language.setCurrentFromCache()
+    Language.update()
 
   $('.translate').on 'click', ->
     Language.change()

@@ -10,6 +10,7 @@ gem 'coffee-rails'
 
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
+gem 'jquery-cookie-rails'
 gem 'jbuilder'
 gem 'uglifier'
 gem 'therubyracer'
