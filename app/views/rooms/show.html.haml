@@ -1,4 +1,22 @@
 %ul.messages
+  %li.ja
+    音声入力をする場合は、日本語は
+    %strong
+      日本語キーボードの音声
+    、英語は
+    %strong
+      英語キーボードの音声
+    で入力してください。
+  %li.ja
+    いつもどおり、フリック入力で入力することもできます。
+  %li.ja
+    翻訳する場合は、「trans」ボタンを押してください。
+
+  %li.en
+    You can fill in below text field with voice input, or keyboard as usual.
+  %li.en
+    If you want to translate Japanese text into English, you have to tap 'trans' button.
+
   - @room.messages.each do |m|
     - m.translated_messages.each do |tm|
       %li{class: tm.language}

@@ -2,7 +2,7 @@ class Room
   @scroll: ->
     $('html, body').animate
       scrollTop: $(document).height()
-    , 1000
+    , 200
 
 class Language
   @current: 'ja'
@@ -39,5 +39,6 @@ $ ->
 
   $('.translate').on 'click', ->
     Language.change()
+    Room.scroll()
 
 window.Room = Room
