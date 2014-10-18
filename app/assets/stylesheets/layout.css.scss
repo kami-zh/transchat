@@ -97,7 +97,7 @@ body {
       overflow: hidden;
       width: 100%;
       padding: 0 0 30px;
-      border-bottom: 1px solid whiten($base_color, 85%);
+      border-bottom: 1px solid whiten($base_color, 95%);
       background-repeat: no-repeat;
       background-position: 100% 50%;
       background-size: calc(50% - 10px) 100%;
@@ -119,6 +119,10 @@ body {
 
       &.note {
         margin-bottom: 30px;
+
+        h3 {
+          text-align: center;
+        }
 
         p {
           width: calc(100% - 40px);
