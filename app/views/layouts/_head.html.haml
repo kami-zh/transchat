@@ -6,3 +6,14 @@
 = javascript_include_tag 'application', 'data-turbolinks-track' => true
 = csrf_meta_tags
 = favicon_link_tag 'symbol.png'
+
+- if current_page? root_path
+  %meta{name: 'description', content: 'transchatは、日本語⇔英語を翻訳する音声入力チャットサービスです。'}
+  %meta{name: 'keywords', content: 'チャット, 音声, 翻訳'}
+
+%meta{property: 'og:title', content: 'transchat | 日本語⇔英語を翻訳する音声入力チャット'}
+%meta{property: 'og:description', content: 'transchatは、日本語⇔英語を翻訳する音声入力チャットサービスです。'}
+%meta{property: 'og:type', content: 'website'}
+%meta{property: 'og:image', content: image_url('og_image.png')}
+%meta{property: 'og:url', content: root_url}
+%meta{property: 'fb:app_id', content: '360053087493213'}
