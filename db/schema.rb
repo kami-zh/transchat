@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20141018075443) do
     t.datetime "updated_at"
   end
 
-  create_table "transrated_messages", force: true do |t|
+  create_table "translated_messages", force: true do |t|
     t.integer  "message_id"
     t.string   "language"
     t.text     "content"

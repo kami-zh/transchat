@@ -15,6 +15,10 @@ gem 'uglifier'
 gem 'therubyracer'
 gem 'turbolinks'
 
+gem 'dotenv-rails'
+
+gem 'microsoft_translator'
+
 group :development do
   gem 'spring'
   gem 'capistrano'
@@ -46,5 +50,4 @@ end
 
 group :production do
   gem 'unicorn'
-  gem 'dotenv-rails'
 end

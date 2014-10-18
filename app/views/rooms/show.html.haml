@@ -1,1 +1,13 @@
-show
+%ul
+  - @room.messages.each do |m|
+    - m.translated_messages.each do |tm|
+      %li{class: tm.language}
+        = tm.content
+
+= form_for @message do |f|
+  %div
+    = f.text_field :content
+
+  %div
+    = f.hidden_field :room_id, value: params[:id]
+    = f.submit '送信'
