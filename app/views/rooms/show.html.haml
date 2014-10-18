@@ -4,6 +4,9 @@
       %li{class: tm.language}
         = tm.content
 
+%button.translate
+  翻訳
+
 = form_for @message do |f|
   %div
     = f.text_field :content
