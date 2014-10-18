@@ -12,6 +12,8 @@
 
 $main_color: #e0c074;
 
+$accent_color: #eda96f;
+
 $base_color: whiten(mix(#000, $main_color), 10%);
 
 // -------------------------------------
@@ -133,4 +135,97 @@ body {
   margin-bottom: 40px;
   color: whiten($base_color, 50%);
   text-align: center;
+}
+
+// -------------------------------------
+// Room
+// -------------------------------------
+
+.room {
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, darken($main_color, 10%), $main_color);
+
+  h1 {
+    margin: 0;
+    padding: 15px 0;
+    font-size: 180%;
+  }
+}
+
+.content {
+  padding: 58px 0 148px;
+}
+
+.messages {
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+
+  li {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: whiten($base_color, 95%);
+    border-radius: 2px;
+  }
+}
+
+.translate {
+  position: fixed;
+  bottom: 68px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid darken($accent_color, 20%);
+  border-radius: 100%;
+  background: $accent_color;
+  color: #fff;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 150%;
+}
+
+.new_message {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  border-top: whiten($base_color, 85%);
+  background-color: whiten($base_color, 95%);
+
+  div {
+    &.form-content {
+      float: left;
+      width: calc(100% - 60px);
+      margin-right: 10px;
+
+      input[type=text] {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid whiten($base_color, 85%);
+        border-radius: 0;
+      }
+    }
+
+    &.form-submit {
+      float: right;
+      width: 50px;
+
+      input[type=submit] {
+        width: 100%;
+        padding: 5px;
+        border: darken($main_color, 20%);
+        border-radius: 0;
+        background-color: $main_color;
+        color: #fff;
+      }
+    }
+  }
+}
+
 }

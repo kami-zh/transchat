@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  layout 'room'
+
   def show
     @room = Room.find(params[:id])
 

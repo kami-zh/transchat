@@ -3,13 +3,11 @@
   %head
     = render 'layouts/head'
 
-  %body
+  %body.room
     .header
       %h1
         %i.fa.fa-comments-o
         transchat
-
-      = render 'layouts/main_visual' if current_page?(root_path)
 
     .content
       = yield

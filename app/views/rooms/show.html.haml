@@ -1,16 +1,19 @@
-%ul
+%ul.messages
   - @room.messages.each do |m|
     - m.translated_messages.each do |tm|
       %li{class: tm.language}
         = tm.content
 
 %button.translate
-  翻訳
+  trans
 
 = form_for @message do |f|
-  %div
+  %div.form-content
     = f.text_field :content, autofocus: true
 
-  %div
+  %div.form-submit
     = f.hidden_field :room_id, value: params[:id]
-    = f.submit '送信'
+    = f.submit 'OK'
+
+:coffee
+  Room.scroll()
