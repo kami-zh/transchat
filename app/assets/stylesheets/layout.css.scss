@@ -102,9 +102,9 @@ body {
       background-position: 100% 50%;
       background-size: calc(50% - 10px) 100%;
 
-      &:nth-child(1) { background-image: url(step_1.png); }
-      &:nth-child(2) { background-image: url(step_2.png); }
-      &:nth-child(3) { background-image: url(step_3.png); }
+      &:nth-child(1) { background-image: image-url('step_1.png'); }
+      &:nth-child(2) { background-image: image-url('step_2.png'); }
+      &:nth-child(3) { background-image: image-url('step_3.png'); }
 
       h3 {
         margin: 30px 20px 20px;
